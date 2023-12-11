@@ -34,7 +34,10 @@ var lifesAnswers = [
  */
 function consultTheOracle(arr) {
     // code here
-}
+    let randomer = Math.floor(Math.random() * arr.length)
+
+    return arr[randomer]
+};
 
 console.log("The oracle says", consultTheOracle(lifesAnswers));
 console.log("(should be one of our answers) \n")
@@ -66,7 +69,19 @@ const expected3 = [];
  */
 function concatArrWithSelf(items) {
     // code here
+    let empty = [];
+
+    for (let i = 0; i < items.length; i++) {
+        empty.push(items[i])
+    }
+
+    for (let j = 0; j < items.length; j++) {
+        empty.push(items[j])
+    }
+    
+    return empty;
 }
+
 console.log("****************Algo Two *****************");
 console.log("A");
 const actual1 = concatArrWithSelf(arr1);
